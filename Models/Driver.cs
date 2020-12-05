@@ -10,7 +10,7 @@ namespace DeliveryApp.Models
         public string DriverLoginId { set; get; }
         public string DriverPassword { set; get; }
         public void ViewRute() { }
-        public void DeliveryStatus() { var i = 0; }
+        public void DeliveryStatus() { }
 
     }
 }

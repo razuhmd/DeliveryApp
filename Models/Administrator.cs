@@ -5,14 +5,19 @@ using System.Threading.Tasks;
 
 namespace DeliveryApp.Models
 {
-    public class Administrator
+    public class Administrator : Employee
     {
-        public string AdministratorLoginId { set; get; }
+        public int AdministratorLoginId { set; get; }
         public string AdministratorPassword { set; get; }
-        public void ViewProducts() { }
-        public void AddProduct() { }
-        public void DeleteProduct() { }
-        public void AddToRute() { }
-        public void EditDeliveryStatus() { }
+        //public void ViewProducts() { }
+        //public void AddProduct() { }
+        //public void DeleteProduct() { }
+        //public void AddToRute() { }
+        //public void EditDeliveryStatus() { }
+
+        //internal void Remove(int employeeId)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
