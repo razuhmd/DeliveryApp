@@ -1,0 +1,64 @@
+﻿@page
+@model DeliveryApp.Pages.myPages.OrderModel
+@using Newtonsoft.Json
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<h1>All Orders</h1>
+
+<p>
+    <a asp-page="CreateOrder">Create New Order</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Order ID
+            </th>
+            <th>
+                Expected Delivery Date
+            </th>            
+            <th>
+                Delivery Address
+            </th>
+            <th>
+                Vendor Details
+            </th>            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model.Orders)
+        {
+            <tr>
+                <td>
+                    @order.Value.OrderId
+                </td>
+                <td>
+                    @order.Value.ExpectedDeliveryDate
+                </td>
+                <td>
+                    @*@{string s = JsonConvert.SerializeObject(order.Value.Address);}*@
+
+                    @order.Value.Address.OrderAddressId <br>
+                    @order.Value.Address.CustomerName<br>
+                    @order.Value.Address.StreetHouse<br>
+                    @order.Value.Address.PostCode
+                    @order.Value.Address.Town<br>
+                    Phone/Mobil: @order.Value.Address.CustomerPhone
+
+                </td>
+                <td>
+
+                    @order.Value.Vendor.VendorId<br>
+                    @order.Value.Vendor.VendorName<br>
+                    @order.Value.Vendor.VendorAddress<br>
+                    Phone/Mobil: @order.Value.Vendor.VendorPhoneNumber<br>
+                    Email : @order.Value.Vendor.VendorEmail
+                                                                     
+                </td>                             
+            </tr>
+        }
+    </tbody>
+</table>

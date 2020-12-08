@@ -12,16 +12,18 @@ namespace DeliveryApp.Pages
     public class EmployeeModel : PageModel
     {
         private EmployeeCatalog _eCatalog;
+      
 
         public EmployeeModel(EmployeeCatalog eCatalog)
         {
-            _eCatalog = eCatalog;
+            _eCatalog = eCatalog;          
         }
 
-        public Dictionary<int, Employee> employees { get; private set; }
+        public Dictionary<int, Employee> Employees { get; private set; }
+       
         public IActionResult OnGet()
         {
-            employees = _eCatalog.AllEmployees();
+            Employees = _eCatalog.AllEmployees();
             return Page();
         }
     }

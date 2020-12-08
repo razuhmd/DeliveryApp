@@ -7,10 +7,10 @@ namespace DeliveryApp.Models
 {
     public class Vendor
     {
-        public int VendorId { set; get; }
-        public string VendorPassword { set; get; }
-        public string VendorAddress { set; get; }
-        public string VendorPhoneNumber { set; get; }
-        public string VendorEmail { set; get; }
+        public int VendorId { get; set; }
+        public string VendorName { get; set; }
+        public string VendorAddress { get; set; }
+        public string VendorPhoneNumber { get; set; }
+        public string VendorEmail { get; set; }
     }
 }

@@ -1,0 +1,39 @@
+﻿@page
+@model DeliveryApp.Pages.myPages.CreateEmployeeModel
+@{
+    ViewData["Title"] = "CreateEmployee";
+}
+
+<h1>Create New Employee</h1>
+
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="@Model.Employee.EmployeeId" class="control-label">Employee ID </label>
+        <input asp-for="@Model.Employee.EmployeeId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Employee.EmployeeName" class="control-label">Employee Name </label>
+        <input asp-for="@Model.Employee.EmployeeName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Employee.EmployeeEmail" class="control-label">Employee E-mail</label>
+        <input asp-for="@Model.Employee.EmployeeEmail" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Employee.EmployeeAddress" class="control-label">Employee Address</label>
+        <input asp-for="@Model.Employee.EmployeeAddress" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Employee.EmployeePhoneNumber" class="control-label">Phone/Mobile </label>
+        <input asp-for="@Model.Employee.EmployeePhoneNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Employee.EmployeeType" class="control-label">Employee Designation</label>
+        <input asp-for="@Model.Employee.EmployeeType" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>

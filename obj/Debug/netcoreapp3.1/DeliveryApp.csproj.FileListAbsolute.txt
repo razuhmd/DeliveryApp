@@ -166,8 +166,11 @@ D:\Assignments\Final Assignment 1st Semester\DeliveryApp\bin\Debug\netcoreapp3.1
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\DeliveryApp.csproj.CoreCompileInputs.cache
-D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\DeliveryApp.MvcApplicationPartsAssemblyInfo.cache
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\Employee.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\Order.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\DeliveryApp.csproj.CoreCompileInputs.cache
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\DeliveryApp.MvcApplicationPartsAssemblyInfo.cache
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\CreateEmployee.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\CreateOrder.cshtml.g.cs

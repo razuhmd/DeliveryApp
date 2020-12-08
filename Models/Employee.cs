@@ -12,7 +12,8 @@ namespace DeliveryApp.Models
         public string EmployeeEmail { get; set;}
         public string EmployeeAddress { get; set; }
         public string EmployeePhoneNumber { get; set; }
-       
+        public string EmployeeType { get; set; }
+
     }
 
 }

@@ -21,6 +21,7 @@ namespace DeliveryApp
         {
             services.AddRazorPages();
             services.AddSingleton<EmployeeCatalog>();
+            services.AddSingleton<OrderCatalog>();
 
         }
 

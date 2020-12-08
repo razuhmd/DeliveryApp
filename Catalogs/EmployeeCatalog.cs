@@ -9,12 +9,15 @@ namespace DeliveryApp.Catalogs
     public class EmployeeCatalog
     {
         private Dictionary<int, Employee> employees { get; }
+        
         public EmployeeCatalog()
         {
             employees = new Dictionary<int, Employee>();
-            employees.Add(1, new Employee() { EmployeeId = 1, EmployeeName = "Peter", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455"});
-            employees.Add(2, new Employee() { EmployeeId = 2, EmployeeName = "Bojan", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455" });
-            employees.Add(3, new Employee() { EmployeeId = 3, EmployeeName = "Okan", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455" });
+            
+            employees.Add(1, new Employee() { EmployeeId = 1, EmployeeName = "Peter", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455", EmployeeType = "Administrator"});
+            employees.Add(2, new Employee() { EmployeeId = 2, EmployeeName = "Bojan", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455", EmployeeType = "Driver" });
+            employees.Add(3, new Employee() { EmployeeId = 3, EmployeeName = "Okan", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455", EmployeeType = "Driver" });
+            
         }
 
         public Dictionary<int, Employee> AllEmployees()
