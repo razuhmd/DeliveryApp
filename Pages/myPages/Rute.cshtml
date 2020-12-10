@@ -1,0 +1,76 @@
+﻿@page
+@model DeliveryApp.Pages.myPages.RuteModel
+@{
+    ViewData["Title"] = "Rute";
+}
+
+<h1>All Rutes</h1>
+
+<p>
+    <a asp-page="CreateRute">Create New Rute</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Rute Number
+            </th>
+            <th>
+                Employee ID
+            </th>
+            <th>
+                Employee Name
+            </th>
+            <th>
+                Employee Email
+            </th>
+            <th>
+                Employee Address
+            </th>
+            <th>
+                Employee Phone/Mobile
+            </th>
+            <th>
+                Employee Type
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rute in Model.Rutes)
+        {
+        <tr>
+            <td>
+                @rute.Value.RuteId
+            </td>
+            @if (rute.Value.Employee != null)
+            {
+                <td>
+                    @rute.Value.Employee.EmployeeId
+                </td>
+                <td>
+                    @rute.Value.Employee.EmployeeName
+                </td>
+                <td>
+                    @rute.Value.Employee.EmployeeEmail
+                </td>
+                <td>
+                    @rute.Value.Employee.EmployeeAddress
+                </td>
+                <td>
+                    @rute.Value.Employee.EmployeePhoneNumber
+                </td>
+                <td>
+                    @rute.Value.Employee.EmployeeType
+                </td>
+            }
+            else
+            {
+                <td>
+                    No Employee Assigned
+                </td>
+            }
+        </tr>
+        }
+    </tbody>
+</table>

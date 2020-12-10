@@ -11,22 +11,75 @@
     <div class="form-group">
         <label asp-for="@Model.Order.OrderId" class="control-label">Order ID </label>
         <input asp-for="@Model.Order.OrderId" class="form-control" />
+        <span asp-validation-for="@Model.Order.OrderId" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="@Model.Order.ExpectedDeliveryDate" class="control-label">Expected Delivery Date </label>
         <input asp-for="@Model.Order.ExpectedDeliveryDate" class="form-control" />
+        <span asp-validation-for="@Model.Order.ExpectedDeliveryDate" class="text-danger"></span>
     </div>
+
+    <h3>Delivery Address (Required)</h3>
+
     <div class="form-group">
-        <h2>Delivery Address</h2>
         <label asp-for="@Model.Order.Address.OrderAddressId" class="control-label">Order Address ID</label>
         <input asp-for="@Model.Order.Address.OrderAddressId" class="form-control" />
         <span asp-validation-for="@Model.Order.Address.OrderAddressId" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Order.Vendor" class="control-label">Vendor Details</label>
-        <input asp-for="@Model.Order.Vendor" class="form-control" />
+        <label asp-for="@Model.Order.Address.CustomerName" class="control-label">Customer Name</label>
+        <input asp-for="@Model.Order.Address.CustomerName" class="form-control" />
+        <span asp-validation-for="@Model.Order.Address.CustomerName" class="text-danger"></span>
     </div>
-    
+    <div class="form-group">
+        <label asp-for="@Model.Order.Address.StreetHouse" class="control-label">Street Name and House Number</label>
+        <input asp-for="@Model.Order.Address.StreetHouse" class="form-control" />
+        <span asp-validation-for="@Model.Order.Address.StreetHouse" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Order.Address.PostCode" class="control-label">Post Code</label>
+        <input asp-for="@Model.Order.Address.PostCode" class="form-control" />
+        <span asp-validation-for="@Model.Order.Address.PostCode" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Order.Address.Town" class="control-label">Town/City Name</label>
+        <input asp-for="@Model.Order.Address.Town" class="form-control" />
+        <span asp-validation-for="@Model.Order.Address.Town" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Order.Address.CustomerPhone" class="control-label">Customer Phone/Mobile</label>
+        <input asp-for="@Model.Order.Address.CustomerPhone" class="form-control" />
+        <span asp-validation-for="@Model.Order.Address.CustomerPhone" class="text-danger"></span>
+    </div>
+
+    <h3>Vendor Details</h3>
+
+    <div class="form-group">
+        <label asp-for="@Model.Order.Vendor.VendorId" class="control-label">Vendor ID</label>
+        <input asp-for="@Model.Order.Vendor.VendorId" class="form-control" />
+        <span asp-validation-for="@Model.Order.Vendor.VendorId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Order.Vendor.VendorName" class="control-label">Vendor Name</label>
+        <input asp-for="@Model.Order.Vendor.VendorName" class="form-control" />
+        <span asp-validation-for="@Model.Order.Vendor.VendorName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Order.Vendor.VendorAddress" class="control-label">Vendor Address</label>
+        <input asp-for="@Model.Order.Vendor.VendorAddress" class="form-control" />
+        <span asp-validation-for="@Model.Order.Vendor.VendorAddress" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Order.Vendor.VendorPhoneNumber" class="control-label">Vendor Phone</label>
+        <input asp-for="@Model.Order.Vendor.VendorPhoneNumber" class="form-control" />
+        <span asp-validation-for="@Model.Order.Vendor.VendorPhoneNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Order.Vendor.VendorEmail" class="control-label">Vendor Email</label>
+        <input asp-for="@Model.Order.Vendor.VendorEmail" class="form-control" />
+        <span asp-validation-for="@Model.Order.Vendor.VendorEmail" class="text-danger"></span>
+    </div>
+
     <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary" />
     </div>

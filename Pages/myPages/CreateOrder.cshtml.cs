@@ -27,13 +27,15 @@ namespace DeliveryApp.Pages.myPages
 
         public IActionResult OnPost()
         {
-            if(!ModelState.IsValid)
-            { return Page(); }
+            if(ModelState.IsValid)
+            {
+                _oCatalog.AddOrder(Order);
+                return RedirectToPage("Order");
+            }
 
             else
-            { _oCatalog.AddOrder(Order); }
-            
-            return RedirectToPage("Order");
+            { return Page(); }
+                        
         }
     }
 }

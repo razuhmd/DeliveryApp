@@ -9,18 +9,18 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DeliveryApp.Pages.myPages
 {
-    public class CreateEmployeeModel : PageModel
+    public class CreateRuteModel : PageModel
     {
-        
-        private EmployeeCatalog _eCatalog;
+        private RuteCatalog _rCatalog;
 
         [BindProperty]
-        public Employee Employee { get; set; }
+        public Rute Rute { get; set; }
 
-        public CreateEmployeeModel(EmployeeCatalog eCatalog)
+        public CreateRuteModel(RuteCatalog rCatalog)
         {
-            _eCatalog = eCatalog;
+            _rCatalog = rCatalog;
         }
+
         public IActionResult OnGet()
         {
             return Page();
@@ -30,8 +30,8 @@ namespace DeliveryApp.Pages.myPages
         {
             if(ModelState.IsValid)
             {
-                _eCatalog.AddEmployees(Employee);
-                return RedirectToPage("Employee");
+                _rCatalog.AddRute(Rute);
+                return RedirectToPage("Rute");               
             }
             else
             {

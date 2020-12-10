@@ -174,3 +174,5 @@ D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\DeliveryApp.MvcApplicationPartsAssemblyInfo.cache
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\CreateEmployee.cshtml.g.cs
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\CreateOrder.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\Rute.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\CreateRute.cshtml.g.cs
