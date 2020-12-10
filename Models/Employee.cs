@@ -13,7 +13,7 @@ namespace DeliveryApp.Models
         [Required]
         public string EmployeeName { get; set; }
         [Required]
-       // [RegularExpression(@"^[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", ErrorMessage = "Invalid email format")]
+        [EmailAddress]
         public string EmployeeEmail { get; set;}
         public string EmployeeAddress { get; set; }
         public string EmployeePhoneNumber { get; set; }

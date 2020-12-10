@@ -14,7 +14,7 @@ namespace DeliveryApp.Models
         [Required]
         public string VendorPhoneNumber { get; set; }
         [Required]
-        //[RegularExpression(@"^[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", ErrorMessage ="Invalid email format")]
+        [EmailAddress]
         public string VendorEmail { get; set; }
     }
 }

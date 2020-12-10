@@ -9,15 +9,6 @@ namespace DeliveryApp.Models
     {
         public int AdministratorLoginId { set; get; }
         public string AdministratorPassword { set; get; }
-        //public void ViewProducts() { }
-        //public void AddProduct() { }
-        //public void DeleteProduct() { }
-        //public void AddToRute() { }
-        //public void EditDeliveryStatus() { }
-
-        //internal void Remove(int employeeId)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        
     }
 }
