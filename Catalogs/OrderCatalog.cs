@@ -18,10 +18,40 @@ namespace DeliveryApp.Catalogs
         public OrderCatalog()
         {
             orders = new Dictionary<int, Order>();
-            orders.Add(1, new Order() { OrderId = 1, ExpectedDeliveryDate = DateTime.Today, Address = oAddress1, Vendor = vendor1});
-            orders.Add(2, new Order() { OrderId = 2, ExpectedDeliveryDate = DateTime.Today, Address = oAddress2, Vendor = vendor2});
-            orders.Add(3, new Order() { OrderId = 3, ExpectedDeliveryDate = DateTime.Today, Address = oAddress1, Vendor= vendor1});
-            orders.Add(4, new Order() { OrderId = 4, ExpectedDeliveryDate = DateTime.Today, Address = oAddress2, Vendor = vendor2});
+            orders.Add(KeyGenerator(), new Order() { OrderId = IdGenerator(), ExpectedDeliveryDate = DateTime.Today, Address = oAddress1, Vendor = vendor1});
+            orders.Add(KeyGenerator(), new Order() { OrderId = IdGenerator(), ExpectedDeliveryDate = DateTime.Today, Address = oAddress2, Vendor = vendor2});
+            orders.Add(KeyGenerator(), new Order() { OrderId = IdGenerator(), ExpectedDeliveryDate = DateTime.Today, Address = oAddress1, Vendor= vendor1});
+            orders.Add(KeyGenerator(), new Order() { OrderId = IdGenerator(), ExpectedDeliveryDate = DateTime.Today, Address = oAddress2, Vendor = vendor2});
+        }
+
+        public int IdGenerator()
+        {
+            List<int> idList = new List<int>();
+            int id = 1;
+            foreach (var item in orders.Values)
+            {
+                idList.Add(item.OrderId);
+            }
+            if(idList.Count !=0)
+            {
+                id = idList.Max() + 1;
+            }           
+            return id;
+        }
+
+        public int KeyGenerator()
+        {
+            List<int> keyList = new List<int>();
+            int key = 1;
+            foreach (var item in orders.Keys)
+            {
+                keyList.Add(item);
+            }
+            if (keyList.Count != 0)
+            {
+                key = keyList.Max() + 1;
+            }
+            return key;
         }
 
         public Dictionary<int, Order> AllOrders()
@@ -31,7 +61,8 @@ namespace DeliveryApp.Catalogs
 
         public void AddOrder(Order order)
         {
-            orders.Add(order.OrderId, order);
+            order.OrderId = IdGenerator();
+            orders.Add(KeyGenerator(), order);
         }
 
         public void RemoveOrder(Order order)

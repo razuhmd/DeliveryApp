@@ -14,10 +14,40 @@ namespace DeliveryApp.Catalogs
         {
             employees = new Dictionary<int, Employee>();
             
-            employees.Add(1, new Employee() { EmployeeId = 1, EmployeeName = "Peter", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455", EmployeeType = "Administrator"});
-            employees.Add(2, new Employee() { EmployeeId = 2, EmployeeName = "Bojan", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455", EmployeeType = "Driver" });
-            employees.Add(3, new Employee() { EmployeeId = 3, EmployeeName = "Okan", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455", EmployeeType = "Driver" });
+            employees.Add(KeyGenerator(), new Employee() { EmployeeId = IdGenerator(), EmployeeName = "Peter", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455", EmployeeType = "Administrator"});
+            employees.Add(KeyGenerator(), new Employee() { EmployeeId = IdGenerator(), EmployeeName = "Bojan", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455", EmployeeType = "Driver" });
+            employees.Add(KeyGenerator(), new Employee() { EmployeeId = IdGenerator(), EmployeeName = "Okan", EmployeeEmail = "peter@yaho.com", EmployeeAddress = "Sagstuvagen 1, 0000 København", EmployeePhoneNumber = "22334455", EmployeeType = "Driver" });
             
+        }
+
+        public int IdGenerator()
+        {
+            List<int> idList = new List<int>();
+            int id = 1;
+            foreach (var item in employees.Values)
+            {
+                idList.Add(item.EmployeeId);
+            }
+            if (idList.Count != 0)
+            {
+                id = idList.Max() + 1;
+            }
+            return id;
+        }
+
+        public int KeyGenerator()
+        {
+            List<int> keyList = new List<int>();
+            int key = 1;
+            foreach (var item in employees.Keys)
+            {
+                keyList.Add(item);
+            }
+            if (keyList.Count != 0)
+            {
+                key = keyList.Max() + 1;
+            }
+            return key;
         }
 
         public Dictionary<int, Employee> AllEmployees()
@@ -26,7 +56,8 @@ namespace DeliveryApp.Catalogs
         }
         public void AddEmployees(Employee employee)
         {
-            employees.Add(employee.EmployeeId, employee);
+            employee.EmployeeId = IdGenerator();
+            employees.Add(KeyGenerator(), employee);
         }
 
         public void RemoveEmployee(Employee employee)
