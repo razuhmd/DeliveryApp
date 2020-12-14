@@ -22,7 +22,7 @@ namespace DeliveryApp
             services.AddRazorPages();
             services.AddSingleton<EmployeeCatalog>();
             services.AddSingleton<OrderCatalog>();
-            services.AddSingleton<RuteCatalog>();
+            services.AddSingleton<RouteCatalog>();
 
         }
 

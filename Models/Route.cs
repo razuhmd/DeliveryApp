@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace DeliveryApp.Models
 {
-    public class Rute
+    public class Route
     {
         [Required]
-        public int RuteId { get; set; }
+        public int RouteId { get; set; }
+        [Required]
+        public List<int> PostCodes { get; set; }
         public Employee Employee { get; set; }
     }
 }

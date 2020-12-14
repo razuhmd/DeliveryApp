@@ -54,6 +54,19 @@ namespace DeliveryApp.Catalogs
         {
             return employees;
         }
+
+        public Employee GetEmployeeById(int id)
+        {
+            foreach(var empployee in employees.Values)
+            {
+                if(empployee.EmployeeId == id)
+                {
+                    return empployee;
+                }
+            }
+            return null;
+        }
+
         public void AddEmployees(Employee employee)
         {
             employee.EmployeeId = IdGenerator();

@@ -1,0 +1,87 @@
+﻿@page
+@model DeliveryApp.Pages.myPages.RouteModel
+@{
+    ViewData["Title"] = "Route";
+}
+
+<h1>All Routes</h1>
+
+<p>
+    <a asp-page="CreateRoute">Create New Route</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Route Number
+            </th>
+            <th>
+                PostCodes
+            </th>
+            <th>
+                Employee ID
+            </th>
+            <th>
+                Employee Name
+            </th>
+            <th>
+                Employee Email
+            </th>
+            <th>
+                Employee Address
+            </th>
+            <th>
+                Employee Phone/Mobile
+            </th>
+            <th>
+                Employee Type
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var route in Model.Routes)
+        {
+        <tr>
+            <td>
+                @route.Value.RouteId
+            </td>
+            <td>
+                @foreach (var PostCodeList in route.Value.PostCodes)
+                {
+                <li>
+                    @PostCodeList
+                </li>
+                }
+            </td>
+            @if (route.Value.Employee != null)
+            {
+            <td>
+                @route.Value.Employee.EmployeeId
+            </td>
+            <td>
+                @route.Value.Employee.EmployeeName
+            </td>
+            <td>
+                @route.Value.Employee.EmployeeEmail
+            </td>
+            <td>
+                @route.Value.Employee.EmployeeAddress
+            </td>
+            <td>
+                @route.Value.Employee.EmployeePhoneNumber
+            </td>
+            <td>
+                @route.Value.Employee.EmployeeType
+            </td>
+            }
+            else
+            {
+            <td>
+                No Employee Assigned
+            </td>
+            }
+        </tr>
+    }
+</tbody>
+</table>

@@ -9,19 +9,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DeliveryApp.Pages.myPages
 {
-    public class RuteModel : PageModel
+    public class RouteModel : PageModel
     {
-        private RuteCatalog _rCatalog;
+        private RouteCatalog _rCatalog;
 
-        public RuteModel(RuteCatalog rCatalog)
+        public RouteModel(RouteCatalog rCatalog)
         {
             _rCatalog = rCatalog;
         }
 
-        public Dictionary<int, Rute> Rutes { get; private set; }
+        public Dictionary<int, Route> Routes { get; private set; }
         public IActionResult OnGet()
         {
-            Rutes = _rCatalog.AllRutes();
+            Routes = _rCatalog.AllRoutes();
             return Page();
         }
     }
