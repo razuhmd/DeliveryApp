@@ -24,12 +24,6 @@ namespace DeliveryApp.Pages
         [BindProperty(SupportsGet = true)]
         public string SearchFor { get; set; }
 
-        //public IActionResult OnGet()
-        //{
-        //    Employees = _eCatalog.AllEmployees();
-        //    return Page();
-        //}
-
         public IActionResult OnGet()
         {
             Employees = _eCatalog.AllEmployees();

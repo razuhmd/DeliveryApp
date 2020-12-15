@@ -19,9 +19,18 @@ namespace DeliveryApp.Pages.myPages
         }
 
         public Dictionary<int, Order> Orders { get; private set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string SearchFor { get; set; }
+
         public IActionResult OnGet()
         {
             Orders = _oCatalog.AllOrders();
+
+            if (!String.IsNullOrEmpty(SearchFor))
+            {
+                Orders = _oCatalog.Search(SearchFor);
+            }
             return Page();
         }
     }

@@ -43,27 +43,32 @@
         <tbody>
             @foreach (var employee in Model.Employees)
             {
-                <tr>
-                    <td>
-                        @employee.Value.EmployeeId
-                    </td>
-                    <td>
-                        @employee.Value.EmployeeName
-                    </td>
-                    <td>
-                        @employee.Value.EmployeeEmail
-                    </td>
-                    <td>
-                        @employee.Value.EmployeeAddress
-                    </td>
-                    <td>
-                        @employee.Value.EmployeePhoneNumber
-                    </td>
-                    <td>
-                        @employee.Value.EmployeeType
-                    </td>
-                    <td><a asp-page="EditEmployee" class="btn btn-primary" asp-route-id="@employee.Value.EmployeeId">Edit </a></td>
-                </tr>
+            <tr>
+                <td>
+                    @employee.Value.EmployeeId
+                </td>
+                <td>
+                    @employee.Value.EmployeeName
+                </td>
+                <td>
+                    @employee.Value.EmployeeEmail
+                </td>
+                <td>
+                    @employee.Value.EmployeeAddress
+                </td>
+                <td>
+                    @employee.Value.EmployeePhoneNumber
+                </td>
+                <td>
+                    @employee.Value.EmployeeType
+                </td>
+                <td>
+                    <a asp-page="EditEmployee" class="btn btn-primary" asp-route-id="@employee.Value.EmployeeId">Edit </a>
+                </td>
+                <td>
+                    <a asp-page="RemoveEmployee" class="btn btn-primary" asp-route-id="@employee.Value.EmployeeId" style="background-color:red">Remove </a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>

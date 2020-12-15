@@ -59,6 +59,18 @@ namespace DeliveryApp.Catalogs
             return orders;
         }
 
+        public Order GetOrderById(int id)
+        {
+            foreach (var order in orders.Values)
+            {
+                if (order.OrderId == id)
+                {
+                    return order;
+                }
+            }
+            return null;
+        }
+
         public void AddOrder(Order order)
         {
             order.OrderId = IdGenerator();
@@ -68,6 +80,48 @@ namespace DeliveryApp.Catalogs
         public void RemoveOrder(Order order)
         {
             orders.Remove(order.OrderId);
+        }
+
+        public bool UpdateOrder(Order editOrder)
+        {
+            foreach (var orderItem in orders.Values)
+            {
+                if (orderItem.OrderId == editOrder.OrderId)
+                {
+                    orderItem.OrderId = editOrder.OrderId;
+                    orderItem.ExpectedDeliveryDate = editOrder.ExpectedDeliveryDate;
+                    orderItem.Address.OrderAddressId = editOrder.Address.OrderAddressId;
+                    orderItem.Address.CustomerName = editOrder.Address.CustomerName;
+                    orderItem.Address.StreetHouse = editOrder.Address.StreetHouse;
+                    orderItem.Address.PostCode = editOrder.Address.PostCode;
+                    orderItem.Address.Town = editOrder.Address.Town;
+                    orderItem.Address.OrderAddressId = editOrder.Address.OrderAddressId;
+                    orderItem.Address.CustomerPhone = editOrder.Address.CustomerPhone;
+                    orderItem.Vendor.VendorId = editOrder.Vendor.VendorId;
+                    orderItem.Vendor.VendorName = editOrder.Vendor.VendorName;
+                    orderItem.Vendor.VendorAddress = editOrder.Vendor.VendorAddress;
+                    orderItem.Vendor.VendorPhoneNumber = editOrder.Vendor.VendorPhoneNumber;
+                    orderItem.Vendor.VendorEmail = editOrder.Vendor.VendorEmail;
+
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public Dictionary<int, Order> Search(string searchFor)
+        {
+            Dictionary<int, Order> searchedOrder = new Dictionary<int, Order>();
+
+            foreach (var order in orders.Values)
+            {
+                if (order.Address.CustomerName.StartsWith(searchFor) || order.Address.CustomerPhone.StartsWith(searchFor) || order.Address.StreetHouse.StartsWith(searchFor) || order.Address.Town.StartsWith(searchFor) || order.Vendor.VendorName.StartsWith(searchFor) || order.Vendor.VendorAddress.StartsWith(searchFor) || order.Vendor.VendorEmail.StartsWith(searchFor) || order.Vendor.VendorPhoneNumber.StartsWith(searchFor))
+                {
+                    searchedOrder.Add(order.OrderId, order);
+                }
+            }
+
+            return searchedOrder;
         }
     }
 }

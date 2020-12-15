@@ -11,6 +11,12 @@
     <a asp-page="CreateOrder">Create New Order</a>
 </p>
 
+<form method="get">
+    Search For:
+    <input type="text" asp-for="SearchFor" />
+    <input type="submit" value="Filter" />
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -31,34 +37,40 @@
     <tbody>
         @foreach (var order in Model.Orders)
         {
-            <tr>
-                <td>
-                    @order.Value.OrderId
-                </td>
-                <td>
-                    @order.Value.ExpectedDeliveryDate
-                </td>
-                <td>
-                    @*@{string s = JsonConvert.SerializeObject(order.Value.Address);}*@
+        <tr>
+            <td>
+                @order.Value.OrderId
+            </td>
+            <td>
+                @order.Value.ExpectedDeliveryDate
+            </td>
+            <td>
+                @*@{string s = JsonConvert.SerializeObject(order.Value.Address);}*@
 
-                    @order.Value.Address.OrderAddressId <br>
-                    @order.Value.Address.CustomerName<br>
-                    @order.Value.Address.StreetHouse<br>
-                    @order.Value.Address.PostCode
-                    @order.Value.Address.Town<br>
-                    Phone/Mobil: @order.Value.Address.CustomerPhone
+                @order.Value.Address.OrderAddressId <br>
+                @order.Value.Address.CustomerName<br>
+                @order.Value.Address.StreetHouse<br>
+                @order.Value.Address.PostCode
+                @order.Value.Address.Town<br>
+                Phone/Mobil: @order.Value.Address.CustomerPhone
 
-                </td>
-                <td>
+            </td>
+            <td>
 
-                    @order.Value.Vendor.VendorId<br>
-                    @order.Value.Vendor.VendorName<br>
-                    @order.Value.Vendor.VendorAddress<br>
-                    Phone/Mobil: @order.Value.Vendor.VendorPhoneNumber<br>
-                    Email : @order.Value.Vendor.VendorEmail
-                                                                     
-                </td>                             
-            </tr>
+                @order.Value.Vendor.VendorId<br>
+                @order.Value.Vendor.VendorName<br>
+                @order.Value.Vendor.VendorAddress<br>
+                Phone/Mobil: @order.Value.Vendor.VendorPhoneNumber<br>
+                Email : @order.Value.Vendor.VendorEmail
+
+            </td>
+            <td>
+                <a asp-page="EditOrder" class="btn btn-primary" asp-route-id="@order.Value.OrderId">Edit </a>
+            </td>
+            <td>
+                <a asp-page="RemoveOrder" class="btn btn-primary" asp-route-id="@order.Value.OrderId" style="background-color:red">Remove </a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

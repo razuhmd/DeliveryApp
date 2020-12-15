@@ -177,3 +177,6 @@ D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\CreateRoute.cshtml.g.cs
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\Route.cshtml.g.cs
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\EditEmployee.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\RemoveEmployee.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\EditOrder.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\RemoveOrder.cshtml.g.cs
