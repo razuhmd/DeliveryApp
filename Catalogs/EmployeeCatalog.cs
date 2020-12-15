@@ -77,5 +77,39 @@ namespace DeliveryApp.Catalogs
         {
             employees.Remove(employee.EmployeeId);
         }
+
+        public bool UpdateEmployee(Employee editEmployee)
+        {
+            foreach (var employeeItem in employees.Values)
+            {
+                if (employeeItem.EmployeeId == editEmployee.EmployeeId)
+                {
+                    employeeItem.EmployeeId = editEmployee.EmployeeId;
+                    employeeItem.EmployeeName = editEmployee.EmployeeName;
+                    employeeItem.EmployeeEmail = editEmployee.EmployeeEmail;
+                    employeeItem.EmployeeAddress = editEmployee.EmployeeAddress;
+                    employeeItem.EmployeePhoneNumber = editEmployee.EmployeePhoneNumber;
+                    employeeItem.EmployeeType = editEmployee.EmployeeType;
+
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public Dictionary<int, Employee> Search(string searchFor)
+        {
+            Dictionary<int, Employee> searchedEmployee = new Dictionary<int, Employee>();
+
+            foreach (var employee in employees.Values)
+            {
+                if (employee.EmployeeName.StartsWith(searchFor) || employee.EmployeeType.StartsWith(searchFor) || employee.EmployeeEmail.StartsWith(searchFor) || employee.EmployeePhoneNumber.StartsWith(searchFor))
+                {  
+                    searchedEmployee.Add(employee.EmployeeId, employee);
+                }
+            }
+
+            return searchedEmployee;
+        }
     }
 }

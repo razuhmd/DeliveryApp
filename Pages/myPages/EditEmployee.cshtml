@@ -1,0 +1,47 @@
+﻿@page
+@model DeliveryApp.Pages.myPages.EditEmployeeModel
+@{
+    ViewData["Title"] = "EditEmployee";
+}
+
+<h3>Edit and Update Employee</h3>
+
+<div>
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="@Model.EditEmployee.EmployeeId" class="control-label"> Employee ID </label>
+            <input asp-for="@Model.EditEmployee.EmployeeId" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.EditEmployee.EmployeeName" class="control-label"> Employee Name </label>
+            <input asp-for="@Model.EditEmployee.EmployeeName" class="form-control" />
+            <span asp-validation-for="@Model.EditEmployee.EmployeeName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.EditEmployee.EmployeeEmail" class="control-label"> Employee Email </label>
+            <input asp-for="@Model.EditEmployee.EmployeeEmail" class="form-control" />
+            <span asp-validation-for="@Model.EditEmployee.EmployeeEmail" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.EditEmployee.EmployeeAddress" class="control-label"> Employee Address </label>
+            <input asp-for="@Model.EditEmployee.EmployeeAddress" class="form-control" />
+            <span asp-validation-for="@Model.EditEmployee.EmployeeAddress" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.EditEmployee.EmployeePhoneNumber" class="control-label"> Employee Phone/Mobile </label>
+            <input asp-for="@Model.EditEmployee.EmployeePhoneNumber" class="form-control" />
+            <span asp-validation-for="@Model.EditEmployee.EmployeePhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.EditEmployee.EmployeeType" class="control-label"> Employee Designation </label>
+            <input asp-for="@Model.EditEmployee.EmployeeType" class="form-control" />
+            <span asp-validation-for="@Model.EditEmployee.EmployeeType" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+
+        </div>
+    </form>
+</div>

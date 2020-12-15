@@ -73,6 +73,7 @@ namespace DeliveryApp.Catalogs
                 if (routeItem.Value.RouteId == routeId)
                 {
                     routeItem.Value.RouteId = route.RouteId;
+                    routeItem.Value.PostCodes = route.PostCodes;
                     routeItem.Value.Employee = route.Employee;
 
                     return true;

@@ -16,15 +16,30 @@ namespace DeliveryApp.Pages
 
         public EmployeeModel(EmployeeCatalog eCatalog)
         {
-            _eCatalog = eCatalog;          
+            _eCatalog = eCatalog;            
         }
 
-        public Dictionary<int, Employee> Employees { get; private set; }
-       
+        public Dictionary<int, Employee> Employees { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string SearchFor { get; set; }
+
+        //public IActionResult OnGet()
+        //{
+        //    Employees = _eCatalog.AllEmployees();
+        //    return Page();
+        //}
+
         public IActionResult OnGet()
         {
             Employees = _eCatalog.AllEmployees();
+
+            if (!String.IsNullOrEmpty(SearchFor))
+            {
+                Employees = _eCatalog.Search(SearchFor);
+            }
             return Page();
         }
+
     }
 }
