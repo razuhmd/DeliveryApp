@@ -1,0 +1,17 @@
+﻿@page
+@model DeliveryApp.Pages.myPages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<body class="text-center" style="">
+<div style="padding-top: 100px" >
+    <a asp-page="AdminLogin" class="btn btn-primary" asp-route-id="" style="background-color:blue">Administrator Login </a>
+</div>
+<div style="padding-top: 20px">
+    <a asp-page="DriverLogin" class="btn btn-primary" asp-route-id="" style="background-color:blue; padding-left: 40px; padding-right: 40px">Driver Login </a>
+</div>
+<div style="padding-top: 20px">
+    <a asp-page="VendorLogin" class="btn btn-primary" asp-route-id="" style="background-color:blue; padding-left: 36px; padding-right: 36px">Vendor Login </a>
+</div>
+</body>

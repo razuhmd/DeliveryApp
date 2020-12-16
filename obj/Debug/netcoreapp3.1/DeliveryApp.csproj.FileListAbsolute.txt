@@ -180,3 +180,7 @@ D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\RemoveEmployee.cshtml.g.cs
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\EditOrder.cshtml.g.cs
 D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\RemoveOrder.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\Login.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\AdminLogin.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\DriverLogin.cshtml.g.cs
+D:\Assignments\Final Assignment 1st Semester\DeliveryApp\obj\Debug\netcoreapp3.1\Razor\Pages\myPages\VendorLogin.cshtml.g.cs

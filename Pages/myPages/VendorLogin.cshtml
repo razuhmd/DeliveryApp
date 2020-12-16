@@ -1,0 +1,19 @@
+﻿@page
+@model DeliveryApp.Pages.myPages.VendorModel
+@{
+    ViewData["Title"] = "VendorLogin";
+}
+
+<h1>Vendor Login</h1>
+<form method="post">
+    E-Mail:
+    <br />
+    <input name="EMail" type="email" class="form-control input-lg" required autofocus />
+    <br />
+    Password:
+    <br />
+    <input name="Password" type="password" class="form-control input-lg" required />
+    <br />
+    <input id="LoginButton" type="submit" value="Login" class="btn btn-success">
+</form>
+
